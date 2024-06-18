@@ -23,7 +23,7 @@
         font-weight: bold;
         color: #3c3c3c;
         position: absolute;
-        top: 5%;
+        top: 8%;
         width: 100%;
         text-align: center;
         /* Fond semi-transparent pour meilleure lisibilité */
@@ -33,8 +33,27 @@
         display: block;
         width: 100%;
         height: 100%;
-/*         object-fit: cover; /* Ajuste l'image pour qu'elle couvre toute la zone sans distorsion */ */
       }
+      option {
+        font-size: 19px;
+      }
+      select {
+        /* font-family: 'Courier New', Courier, monospace; */
+        font-size: 17px;
+        color: #3c3c3c;
+        background-color: transparent;
+      }
+      .beach-list {
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #3c3c3c;
+            position: absolute;
+            top:1%;
+            left: 9%;
+            padding: 10px;
+        }
     </style>
   </head>
   <script>
@@ -50,11 +69,27 @@
       document.getElementById("dateTime").textContent = dateTimeString;
     }
 
-    setInterval(updateDateTime, 1000 * 60); // Met à jour la date et l'heure chaque minute
+    setInterval(updateDateTime, 1000 * 1); // Met à jour la date et l'heure chaque minute
     updateDateTime(); // Met à jour immédiatement lors du chargement de la page
   </script>
   <body>
     <div class="date-time" id="dateTime"></div>
     <img src="./background.png" alt="Description de l'image" />
+    <div class="beach-list">    
+      <select id="beaches" name="beaches">
+          <option value="metzitzim">חוף מציצים</option>
+          <option value="hilton">חוף הילטון</option>
+          <option value="gordon">חוף גורדון</option>
+          <option value="frishman">חוף פרישמן</option>
+          <option value="bugrashov">חוף בוגרשוב</option>
+          <option value="jerusalem">חוף ירושלים</option>
+          <option value="banana">חוף בננה</option>
+          <option value="aviv">חוף אביב</option>
+          <option value="geula">חוף גאולה</option>
+          <option value="dolphinarium">חוף הדולפינריום</option>
+          <option value="drummers">חוף המתופפים</option>
+          <option value="alma">חוף עלמה</option>
+          <option value="ajami">חוף עג'מי</option>
+      </select>
   </body>
 </html>
